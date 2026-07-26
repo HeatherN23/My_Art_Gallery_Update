@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0%;
+  width: 100%;
+  box-sizing: border-box;
+  
+}
+
+body {
+  width:100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #555;
+  background-color: #e3e3e3;  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;  
+}
+
+h1 {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+  font-style: oblique;
+  text-align: center;
+  text-shadow: 2px rgb(49, 49, 49);
+}
+
+.error {
+  color: rgb(155, 0, 0);
+  padding: 2%; 
+  display: none; 
+  text-align: center;  
+}
+
+.searchInput {  
+  padding: 5% 3% 3% 3%;
+  display: flex;
+  justify-content: center;      
+}
+
+label {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #555;
+  font-size: large; 
+  font-weight: bold;
+  max-width:fit-content; 
+  padding: 0% 2% 0% 0%; 
+}
+
+.artDD {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+  min-width: 150px;  
+  max-width:fit-content;  
+}
+
+.container {  
+  display: flex;
+  flex-direction: column;  
+  width: 100%;
+}
+
+
+.title {
+  padding:3% 0% 3% 0%;
+  background-color: rgb(204, 204, 204);
+  color: rgb(22, 57, 122);
+  text-shadow: 5px 5px 5px rgb(133, 131, 131);
+  box-shadow: 0px 0px 5px 0px rgb(34, 34, 34); 
+}  
+
+.gallery {  
+  padding: 0% 0% 0% 3%;  
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.artRow {   
+  width: 100%;
+  min-width: 300px;  
+  gap: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  justify-content: left;
+}
+
+.imageContainer {  
+  display: flex; 
+  flex-shrink: 0;
+  width: auto; 
+  justify-content: left;
+}
+
+.artImg {    
+  padding: 0% 3% 3% 0%;
+  width: 300px;
+  flex-shrink: 0;                         /* never shrink this */
+  }
+
+
+
+
+.artData {  
+  /*border: 2px solid rgb(3, 5, 133);*/
+  padding: 1% 2%;   
+  flex: 1 1 250px;                        /* grow, shrink, preferred width */
+  min-width: 0;                           /* allow to shrink   */  
+  line-height: 1.4;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  box-sizing: border-box;
+  /* flex-direction: column; */
+  /* justify-content: center;  */
+}
+
+.artLabel {
+  font-weight: bold;
+}
+.artDate {
+  font-size: clamp(.8rem, 2vw, 1rem);
+}
+
+.artDesc {
+  font-size: clamp(.8rem, 2vw, 1rem);
+}
+
+@media (max-width: 400px) {
+  .artRow{
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .artImg {
+    margin: 0 auto;   /* center the image once it's stacked*/
+  }
+
+  .artData {
+    /* width: 70%; */
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+
